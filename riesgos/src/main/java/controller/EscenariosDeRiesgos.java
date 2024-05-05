@@ -18,7 +18,8 @@ public class EscenariosDeRiesgos{
 		Properties properties = new Properties();
 		
 		try {
-	    	properties.load(new BufferedReader(new FileReader("C:\\Users\\Marcia Castro\\Documents\\Proyectos java\\riesgos\\riesgos\\src\\main\\resources\\parametros.properties")));
+	    	//properties.load(new BufferedReader(new FileReader("C:\\Users\\Marcia Castro\\git\\bootcampJava\\riesgos\\src\\main\\resources\\parametros.properties")));
+	    	properties.load(new BufferedReader(new FileReader("src/main/resources/parametros.properties")));
 		    } catch (IOException e) {
 		      System.out.println(e);
 		    }      

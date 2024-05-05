@@ -25,7 +25,7 @@ public class main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		/*Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		
 		System.out.println("Bienvenidos y bienvenidas a su programa de Gestión de riesgos");
 			
@@ -37,19 +37,21 @@ public class main {
 		
 		properties = escenarioDeRiesgos.cargarArchivoRiesgos();
 		escenarioDeRiesgos.generarEscenariosDeRiesgo(properties);
-	
-		for(int i = 0; i <= escenarioDeRiesgos.getRiesgos().size(); i = i + 1)
+		
+		Integer numPregunta = 0;
+		
+		for(int i = 0; i <= escenarioDeRiesgos.getRiesgos().size() -1; i = i + 1)
 		{
 			System.out.println(escenarioDeRiesgos.getRiesgos().get(i).getPregunta());
 			System.out.println("R/");
 			String respuesta = scanner.nextLine();
-			if(respuesta.isEmpty() || (!respuesta.equals("Si") && (!respuesta.equals("No")))) {
+			if(respuesta.isEmpty() || (!respuesta.equalsIgnoreCase("Si") && (!respuesta.equalsIgnoreCase("No")))) {
 				System.out.println("Por vavor responda a la pregunta con Si o No");
 				i= i-1;
 			}else {
 				escenarioDeRiesgos.setRiesgo(escenarioDeRiesgos.getRiesgos().get(i), respuesta, i);
 			}
-		}    */
+		}    
 		
 		 int exitCode = new CommandLine(new JEnv()).execute(args); 
 	        System.exit(exitCode); 
