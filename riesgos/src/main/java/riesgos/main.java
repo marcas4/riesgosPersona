@@ -61,8 +61,24 @@ public class main {
 		    
 		}
 		
+		System.out.println("A continuación le presentamos el resultado del análisis de riesgos personal");
+		mostrarResultados(escenariosDeRiesgos);
+		
+		
 		 int exitCode = new CommandLine(new JEnv()).execute(args); 
 	        System.exit(exitCode); 
 	}	
+	
+	
+	static void mostrarResultados(EscenariosDeRiesgos escenarioDeRiesgos) {
+		
+		for (int i = 0; i < escenarioDeRiesgos.getRiesgos().size(); i++) {
+			if (escenarioDeRiesgos.getCalifRiesgo("RIESGO" + (i+1)) >= 2) {
+				System.out.println("Tienes un riesgo de moderado a alto de: " + escenarioDeRiesgos.getRiesgo("RIESGO" + (i+1)));
+			}
+			
+		}
+		
+	}
 	
 }
