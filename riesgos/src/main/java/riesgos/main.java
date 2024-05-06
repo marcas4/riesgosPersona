@@ -3,7 +3,6 @@
  */
 package riesgos;
 
-import java.util.Map;
 import java.util.Properties;
 import java.util.Scanner;
 
@@ -12,16 +11,26 @@ import controller.EscenariosDeRiesgos;
 import modelo.Escenario;
 import modelo.JEnv;
 import picocli.CommandLine;
-import picocli.CommandLine.Command;
+
 
 public class main {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		
-		System.out.println("Bienvenidos y bienvenidas a su programa de Gestión de riesgos");
+		System.out.println("Bienvenidos y bienvenidas a su programa de Gestion de riesgos");
+		
+		System.out.println("A continuacion le haremos una serie de preguntas para realizar un analisis de riesgos personal sobre usted");
+		
+		System.out.println("Se trata de un cuestionario de 12 preguntas a las cuales debe responder con si o no");
 			
-		System.out.println("Por favor responda únicamente con SI o NO el siguiente cuestionario");
+		System.out.println("Escriba cualquier tecla si quiere continuar de lo contrario escriba 1 para salir");
+		
+		String continuar = scanner.nextLine();
+		
+		if (continuar.equals("1")) {
+			 System.exit(0);
+		}
 		
 		Properties properties = new Properties();
 		
@@ -63,6 +72,7 @@ public class main {
 		
 		System.out.println("A continuación le presentamos el resultado del análisis de riesgos personal");
 		mostrarResultados(escenariosDeRiesgos);
+		
 		
 		
 		 int exitCode = new CommandLine(new JEnv()).execute(args); 
