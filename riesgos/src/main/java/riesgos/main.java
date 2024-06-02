@@ -2,8 +2,6 @@
  * 
  */
 package riesgos;
-
-import java.util.Properties;
 import java.util.Scanner;
 
 import controller.Amenazas;
@@ -32,7 +30,7 @@ public class main {
 			 System.exit(0);
 		}
 		
-		Properties properties = new Properties();
+		//Properties properties = new Properties();
 		
 		Amenazas amenazas = new Amenazas();
 		
@@ -45,7 +43,7 @@ public class main {
 				
 		for(int i = 0; i <= amenazas.getAmenazas().size() - 1; i = i + 1) {
 			Integer numPregunta = i+1;
-			String pregunta = amenazas.getPreguntaAmanazas("PREGUNTA"+numPregunta);
+			String pregunta = amenazas.getPreguntaAmenazas("PREGUNTA"+numPregunta);
 			System.out.println(pregunta);
 			System.out.println("R/");
 			Escenario escenario = new Escenario();
@@ -81,13 +79,22 @@ public class main {
 	
 	
 	static void mostrarResultados(EscenariosDeRiesgos escenarioDeRiesgos) {
-		
+		Integer numRiesgos = 0;
 		for (int i = 0; i < escenarioDeRiesgos.getRiesgos().size(); i++) {
 			if (escenarioDeRiesgos.getCalifRiesgo("RIESGO" + (i+1)) >= 2) {
 				System.out.println("Tienes un riesgo de moderado a alto de: " + escenarioDeRiesgos.getRiesgo("RIESGO" + (i+1)));
+				numRiesgos++;
 			}
 			
 		}
+		
+		if(numRiesgos == 0) {
+			System.out.println("Felicitaciones, usted lleva una vida muy saludable tanto física como mentalmente"
+					+ "\n y tiene sus riesgos en un nivel aceptable");
+			}else{
+				System.out.println("\n Para estos riesgos, debe analizar controles para mitigarlos y bajarles la criticidad");
+				
+			}
 		
 	}
 	

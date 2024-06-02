@@ -2,7 +2,6 @@ package modelo;
 
 import java.util.concurrent.Callable;
 
-import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
