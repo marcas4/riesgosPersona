@@ -7,6 +7,8 @@
 #### Empaquetado
 #### Ejecución
 #### Árbol del proyecto
+#### Diagrama de clases
+#### Manual de usuario
 #### Agradecimientos
 
 
@@ -123,6 +125,23 @@ tree
 └─Readme.md
 
 ```
+
+### Diagrama de clases
+
+![Diagrama de clases](images/diagramaDeClases.png?raw=true)
+
+### Manual de usuario
+
+Al iniciar el programa se mostrará un texto de bienvenida y  se deberá dar cualquier tecla para continuar o si desea salir debe dar el número 1
+![Inicio](images/inicio.jpg?raw=true)
+
+Inmediatamente después se empezarán a desplegar una a una las doce (12) preguntas que debe responder con “si” o “no”, si responde de forma distinta se repetirá la palabra hasta que responda de forma correcta
+
+![Preguntas](images/preguntas.jpg?raw=true)
+
+Al finalizar las 12 preguntas se mostrará un texto con los resultados del análisis de sus respuestas a cada una de las preguntas.
+Cada resultado es personal y depende únicamente de las respuestas a las preguntas. 
+Es conveniente que una vez haya puesto en práctica los controles para mitigar los riesgos que le mostró el resultado final, vuelva a realizar el análisis para comprobar que efectivamente ha mitigado los riesgos identificados
 
 ## Agradecimientos
 
