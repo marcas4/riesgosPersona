@@ -98,7 +98,10 @@ tree
 ├─ img
 │  ├─ compile.jpg
 │  ├─ empaquetado.jpg
-│  └─ ejecucion.jpg
+│  ├─ ejecucion.jpg
+│  ├─ diagramaDeClases.jpg
+│  ├─ inicio.jpg
+│  └─ preguntas.jpg
 ├─ src
 │  ├─ main
 │  │  ├─ java
